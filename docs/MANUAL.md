@@ -1,4 +1,4 @@
-# Galeria Pro Clínica 1.2 — Manual rápido
+# Galeria Pro Clínica 1.3 — Manual rápido
 
 Organiza as fotos de um exame, monta folhas A4 com a identidade da clínica e imprime ou
 gera PDF. Funciona **sem internet**, sem login. As fotos originais **nunca são alteradas**.
@@ -20,7 +20,12 @@ gera PDF. Funciona **sem internet**, sem login. As fotos originais **nunca são 
 2. Traga as fotos: **Acompanhar capturas** (as novas do Capture Pro aparecem sozinhas, como
    *disponíveis*), **Adicionar fotos**, **Abrir pasta de capturas** ou arrastar arquivos/pastas.
    Fotos novas **nunca** entram sozinhas na impressão.
-3. À direita, escolha **Fotos por página** (1, 2, 6, 9 ou 12).
+3. Escolha o **Modelo** da página (1, 2, 6, 9 ou 12) — na barra acima da prévia ou à direita.
+   **Cada página tem o seu modelo**; o seletor vale só para a página atual.
+
+   **Trabalhar página por página (como no UltraCap):** escolha o modelo, clique nas fotos,
+   clique em **Nova página ▾** escolhendo o modelo da próxima, clique nas fotos dela, e assim por
+   diante. Use **◀ Anterior / Próxima ▶** para navegar; cada página continua como você deixou.
 4. Escolha a **Quantidade** (o TOTAL de fotos, não por página) e clique em **Selecionar fotos**.
    Exemplo: 6 por página e quantidade 10 → página 1 com 6, página 2 com 4 e **2 células vazias**.
    As fotos são escolhidas na ordem que a galeria está mostrando. Nenhuma foto é repetida nem
@@ -30,7 +35,8 @@ gera PDF. Funciona **sem internet**, sem login. As fotos originais **nunca são 
      **Refazer seleção com N fotos** ou **Cancelar**.
 5. Ajuste à mão:
    - **Um clique** na miniatura seleciona a foto (borda azul, ✔ e número); **outro clique** desmarca.
-     A foto entra na **primeira célula vazia**; sem células vazias, cria a página seguinte.
+     A foto entra na **página em que você está** (primeira posição vazia dali em diante); sem espaço,
+     cria uma página nova no final. Páginas anteriores não mudam.
      **Duplo clique** amplia a foto sem mudar a seleção. O contador azul mostra quantas estão selecionadas.
    - Clique numa **célula vazia** da prévia e depois marque uma foto: ela entra **naquela** célula.
      Ou clique com o botão direito na célula → **Escolher foto para esta posição…**
@@ -49,17 +55,23 @@ gera PDF. Funciona **sem internet**, sem login. As fotos originais **nunca são 
   ocupar o espaço; desligado, **a célula fica vazia** para você preencher depois.
 - **Remover da galeria deste exame** (botão direito na miniatura): tira do exame. Se a foto
   estiver na impressão, o programa avisa onde ela está. O arquivo original no computador **não** é apagado.
-- **Reorganizar e preencher espaços** (painel de páginas): é a **única** ação que fecha as
-  células vazias, puxando as fotos seguintes e mantendo a mesma sequência.
+- Com **“Reorganizar ao retirar foto”** ligado, retirar uma foto fecha o espaço **só na página dela**.
+- **Reorganizar todas as páginas** (painel de páginas, com confirmação) fecha os espaços de todas,
+  puxando as fotos seguintes — é a única ação que move fotos de uma página para outra.
 - **Desmarcar todas**: tira todas as fotos da impressão (a galeria fica igual).
 - Tudo pode ser desfeito e refeito (Ctrl+Z / Ctrl+Y), inclusive Selecionar fotos e Reorganizar.
 
 ## Trocar o modelo de página
-- **Aplicar nesta página**: muda só a página atual. Se couber menos, as fotos que sobrarem vão
-  para o início da página seguinte (as outras páginas mantêm seus modelos); se preciso, uma
-  página nova é criada. O programa informa o que mudou de lugar.
-- **Aplicar em todas**: todas as páginas no novo modelo, mantendo a sequência.
-- Aumentar a capacidade cria células vazias; use **Reorganizar** se quiser juntar as fotos.
+- Escolher outro modelo muda **só a página atual**; as outras páginas nunca são alteradas.
+- Aumentar a capacidade mantém as fotos no lugar e cria posições vazias.
+- Se o novo modelo comportar menos fotos, o programa pergunta: **levar as que sobram para uma
+  nova página no final**, **retirá-las da impressão** (ficam na galeria) ou **cancelar**.
+- **Em todas** aplica o modelo a todas as páginas (cada uma isoladamente), com a mesma pergunta.
+
+## Limpar
+- **Limpar página**: retira as fotos só da página atual (sem confirmação).
+- **Limpar tudo**: retira as fotos de todas as páginas (pede confirmação).
+- Nada é apagado da galeria, dos exames ou da pasta do Capture Pro. **Ctrl+Z** desfaz.
 
 ## Bom saber
 - **Ordem de leitura**: esquerda → direita, de cima para baixo.
