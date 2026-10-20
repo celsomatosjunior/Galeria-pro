@@ -1,0 +1,2 @@
+59db277fb3f992f8add937d956c1a4f420f61aa11f174c246abaceb7765026c8  GaleriaProClinica-Setup-1.4.0.exe
+22645c71a4cd5adbbc65c2dcb087a3b17c820b7fef454d2d81a09d485528cda2  GaleriaProClinica-Portatil-1.4.0.zip

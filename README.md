@@ -1,21 +1,28 @@
-# Galeria Pro Clínica 1.3
+# Galeria Pro Clínica 1.4
 
-> ## ⬇️ Download — versão 1.3.1 (atual)
+> ## ⬇️ Download — versão 1.4.0 (atual)
 >
-> **[GaleriaProClinica-Setup-1.3.1.exe](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.3.1/GaleriaProClinica-Setup-1.3.1.exe)** — instalador único, Windows 10/11 64 bits (22 MB).
-> SHA-256: `95e25b0bec339cc0b4972013b3226834ae2659f1119c6c8311cb36d498c3a558`
+> **[GaleriaProClinica-Setup-1.4.0.exe](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.4.0/GaleriaProClinica-Setup-1.4.0.exe)** — instalador único, Windows 10/11 64 bits (22 MB).
+> SHA-256: `59db277fb3f992f8add937d956c1a4f420f61aa11f174c246abaceb7765026c8`
 >
-> Versão portátil: [GaleriaProClinica-Portatil-1.3.1.zip](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.3.1/GaleriaProClinica-Portatil-1.3.1.zip) — SHA-256: `c679dad7706a0eadf0f811c1a9a06a625b45a079ef2482e708e45deba0ed5318`
+> Versão portátil: [GaleriaProClinica-Portatil-1.4.0.zip](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.4.0/GaleriaProClinica-Portatil-1.4.0.zip) — SHA-256: `22645c71a4cd5adbbc65c2dcb087a3b17c820b7fef454d2d81a09d485528cda2`
 >
-> [Notas da 1.3.1 e como atualizar](instaladores/v1.3.1/LEIA-ME.md) · [Manual](docs/MANUAL.md) · [Relatório de testes](docs/RELATORIO-DE-TESTES.md) · [Avisos de terceiros](instaladores/v1.3.1/AVISOS-DE-TERCEIROS.md)
+> [Notas da 1.4.0 e como atualizar](instaladores/v1.4.0/LEIA-ME.md) · [Manual](docs/MANUAL.md) · [Relatório de testes](docs/RELATORIO-DE-TESTES.md) · [Avisos de terceiros](instaladores/v1.4.0/AVISOS-DE-TERCEIROS.md)
 >
-> Versões anteriores: [1.3.0](instaladores/v1.3.0) · [1.2.0](instaladores/v1.2.0) · [1.1.0](instaladores/v1.1.0)
+> Versões anteriores: [1.3.1](instaladores/v1.3.1) · [1.3.0](instaladores/v1.3.0) · [1.2.0](instaladores/v1.2.0) · [1.1.0](instaladores/v1.1.0)
 
 Organiza as fotografias de exames, monta folhas A4 com a identidade visual da clínica (logo,
 paciente, data e rodapé) e **imprime ou gera PDF**. Complementar ao **Capture Pro**: acompanha a
 pasta de capturas, sem alterar aquele programa. Funciona **100% offline**: sem login, sem internet.
 
 ![Tela principal](docs/tela-principal.png)
+
+## Novidades da 1.4
+- **Fotos reutilizáveis**: cada clique coloca a foto mais uma vez (dez cliques = dez usos), na mesma página ou em outras. A galeria não marca nem bloqueia as fotos usadas.
+- Cada ocorrência é independente: na prévia, clique nela e Delete retira só ela.
+- Ampliar pela **lupa** da miniatura.
+
+![Fotos reutilizáveis](docs/reutilizar-fotos.png)
 
 ## Novidades da 1.3.1
 - **Correção das piscadas contínuas da galeria** que apareciam na 1.3.0 (ver [notas](instaladores/v1.3.1/LEIA-ME.md)).
@@ -58,7 +65,7 @@ Modelos diferentes podem ser usados no mesmo exame. As fotos nunca são deformad
 automaticamente; no PDF entram sem perda (JPEG original byte a byte).
 
 ## Testes
-126 testes automatizados (Linux), incluindo estabilidade visual (sem piscadas), instalação/atualização 1.0 → 1.1 → 1.2 → 1.3 → 1.3.1 e autoteste do programa
+132 testes automatizados (Linux), incluindo estabilidade visual (sem piscadas), instalação/atualização 1.0 → 1.1 → 1.2 → 1.3 → 1.3.1 → 1.4.0 e autoteste do programa
 instalado em Windows simulado (Wine). **Ainda não validado em Windows real nem em impressora
 física** — ver o [relatório de testes](docs/RELATORIO-DE-TESTES.md).
 

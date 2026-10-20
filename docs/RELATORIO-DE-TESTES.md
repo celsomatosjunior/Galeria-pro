@@ -1,11 +1,61 @@
-# Relatório de testes — Galeria Pro Clínica 1.3.1 (20/10/2026)
+# Relatório de testes — Galeria Pro Clínica 1.4.0 (20/10/2026)
 
-Ambientes, separados: **Linux** (testes automatizados; janela real em servidor X para a
-filmagem), **Wine 9.0** (Windows simulado: instalador e programa compilados).
-**Windows real e impressora física: não testados nesta versão.**
+Ambientes, separados: **Linux** (testes automatizados, janela real), **Wine 9.0** (Windows
+simulado: instalador e programa compilados). **Windows real e impressora física: não testados.**
 
-## 1. Correção P0 — piscadas contínuas
-### Investigação (antes de alterar o programa)
+## 1. Fotografias reutilizáveis — testes obrigatórios (seção 6 do pedido)
+Cliques reais na miniatura (eventos de mouse), Delete real na prévia.
+
+| Teste | Linux (janela real) | Wine (programa instalado) |
+|---|---|---|
+| **Critério: 10 cliques na mesma foto = 10 usos** (5 pares rápidos = duplo clique do Windows) | aprovado (6 + 4, página nova) | aprovado (U0) |
+| 1. Adicionar com um clique | aprovado | aprovado (U1) |
+| 2. Clicar de novo: aparece duas vezes | aprovado | aprovado (U2) |
+| 3. A mesma foto 6 vezes numa página de 6 | aprovado | aprovado (U3) |
+| 4. Reutilizar em outra página | aprovado | aprovado (U4) |
+| 5. Retirar só uma ocorrência (prévia + Delete) | aprovado (com e sem “Reorganizar ao retirar”) | aprovado (U5) |
+| 6. As demais continuam intactas; a foto continua na galeria | aprovado | aprovado (U6) |
+| 7. Limpar uma página sem afetar as outras (Ctrl+Z restaura) | aprovado | aprovado (U7) |
+| 8. Salvar e reabrir com as repetições; nenhum arquivo duplicado no disco | aprovado | aprovado (U8) |
+| 9. PDF com todas as ocorrências (JPEG original byte a byte em cada uma) | aprovado | aprovado (U9: [5, 2]) |
+| 10. Galeria livre: miniatura usada desenhada com a mesma borda/fundo de uma nunca usada | aprovado | aprovado (U10) |
+
+Também verificado: a lupa amplia sem mexer na impressão; Delete na galeria não retira nada (só
+orienta); arrastar na prévia move/troca só aquela ocorrência; arrastar da galeria coloca mais uma
+ocorrência ou substitui só aquela; “Retirar todas as ocorrências” pelo menu; **Selecionar fotos**
+continua escolhendo fotos distintas (Completar mantém as repetições manuais e acrescenta fotos novas).
+
+## 2. Compatibilidade
+- Exame **sem** repetição grava formato 2: a 1.3 abre normalmente (verificado com o código da 1.3).
+- Exame **com** repetição grava formato 3: a 1.3 **recusa** abrir (“salvo por uma versão mais nova”),
+  em vez de descartar as repetições (verificado com o código da 1.3).
+- Atualização 1.3.1 → 1.4.0 por cima (Wine): 25 arquivos de exames/configuração intactos (SHA-256),
+  cópia `config.backup-antes-v1.4.0.json`, versão 1.4.0 no registro, arquivos instalados idênticos
+  à distribuição.
+
+## 3. Mantido da 1.3.1 (sem piscadas)
+Autoteste do programa instalado: E1 (510 larguras da galeria sem redesenho contínuo), E2 (parado:
+0 redesenhos, CPU 1,7%), E3 (após cliques, trocas 6/9/12 e navegação a janela assenta). Teste
+automático da varredura da galeria aprovado.
+
+## 4. Linux — total: 132 testes (131 aprovados como administrador + 1 de permissão aprovado como usuário comum)
+Novos: reutilização (composição, ocorrências independentes, automático distinto), 10 cliques,
+cliques rápidos + lupa, fluxo obrigatório 1–10, PDF com repetição sem perda, formato 3.
+Testes antigos que exigiam “2º clique desmarca” ou “nunca repete” foram atualizados para a regra
+nova, mantendo o que verificam (posições, páginas independentes, PDF, galeria intacta).
+
+## 5. Wine 9.0 — autoteste do programa instalado 1.4.0
+**35 passos aprovados**, nenhuma falha (fluxo 1–9, regressão 6/9/12 R1–R10, reutilização U0–U10,
+estabilidade E1–E3). Substitutos de `icuuc.dll`/`mscms.dll` só no ambiente de teste; **não estão**
+no instalador.
+
+## 6. NÃO testado
+- Impressora física; Windows 10/11 real com mouse físico; arrastar físico; Capture Pro ao vivo.
+
+---
+## Versão anterior — 1.3.1 (correção das piscadas)
+
+### 1.3.1 — investigação (antes de alterar o programa)
 - Vídeo da 1.3.0 analisado quadro a quadro: pisca **a galeria** (terceira coluna "fantasma",
   miniaturas mudando entre quadros); prévia, controles e janela estáveis.
 - Instrumentação (`tools/instrument_flicker.py`): contagem de redesenhos, redimensionamentos e
@@ -29,7 +79,7 @@ filmagem), **Wine 9.0** (Windows simulado: instalador e programa compilados).
 O CPU inclui o laço de medição (≈ 1,5%). O único redesenho periódico com o programa parado é o
 cursor de texto piscando no campo do paciente quando ele tem o foco (padrão do Windows).
 
-## 2. Testes obrigatórios (programa real)
+###  Testes obrigatórios (programa real)
 | Teste | Linux (janela real) | Wine (programa instalado) |
 |---|---|---|
 | Interface aberta e parada | aprovado (0 redesenhos em 3 s) | aprovado (E2: 0 redesenhos, CPU 1,7%) |
@@ -40,17 +90,15 @@ cursor de texto piscando no campo do paciente quando ele tem o foco (padrão do 
 | Varredura da largura da galeria | aprovado | aprovado (E1: 510 larguras, 2 alturas) |
 | Travamentos | nenhum | nenhum |
 
-## 3. Linux — total: 126 testes (125 aprovados como administrador + 1 de permissão aprovado como usuário comum)
+###  Linux — total: 126 testes (125 aprovados como administrador + 1 de permissão aprovado como usuário comum)
 Inclui os 2 testes novos de estabilidade e todos os anteriores (um clique, duplo clique, páginas
 independentes, Limpar, regressão 6/9/12, arrastar, Selecionar fotos 10 em 6, Capture Pro, PDF
 byte a byte, salvamento, recuperação, exames da 1.0).
 
-## 4. Wine 9.0 — instalador e programa 1.3.1
+###  Wine 9.0 — instalador e programa 1.3.1
 - Atualização 1.3.0 → 1.3.1 por cima: 24 arquivos de exames/configuração intactos (SHA-256),
   cópia `config.backup-antes-v1.3.1.json`, versão 1.3.1 no registro, arquivos instalados
   idênticos à distribuição.
 - Autoteste do programa instalado: **24 passos aprovados**, nenhuma falha.
 - Substitutos de `icuuc.dll`/`mscms.dll` só no ambiente Wine de teste; **não estão** no instalador.
 
-## 5. NÃO testado
-- Impressora física; Windows 10/11 real com mouse físico; arrastar físico; Capture Pro ao vivo.
