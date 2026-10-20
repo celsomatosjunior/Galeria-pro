@@ -1,21 +1,24 @@
 # Galeria Pro Clínica 1.3
 
-> ## ⬇️ Download — versão 1.3.0 (atual)
+> ## ⬇️ Download — versão 1.3.1 (atual)
 >
-> **[GaleriaProClinica-Setup-1.3.0.exe](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.3.0/GaleriaProClinica-Setup-1.3.0.exe)** — instalador único, Windows 10/11 64 bits (22 MB).
-> SHA-256: `c06e2637770b267c346d19e668fa16f7cab46a57c3c9108790399485685cb8b2`
+> **[GaleriaProClinica-Setup-1.3.1.exe](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.3.1/GaleriaProClinica-Setup-1.3.1.exe)** — instalador único, Windows 10/11 64 bits (22 MB).
+> SHA-256: `95e25b0bec339cc0b4972013b3226834ae2659f1119c6c8311cb36d498c3a558`
 >
-> Versão portátil: [GaleriaProClinica-Portatil-1.3.0.zip](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.3.0/GaleriaProClinica-Portatil-1.3.0.zip) — SHA-256: `660242548b720ffe4d1b9b96699f36044e308fe5c38a414ed2e86aa13489a80e`
+> Versão portátil: [GaleriaProClinica-Portatil-1.3.1.zip](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.3.1/GaleriaProClinica-Portatil-1.3.1.zip) — SHA-256: `c679dad7706a0eadf0f811c1a9a06a625b45a079ef2482e708e45deba0ed5318`
 >
-> [Notas da 1.3.0 e como atualizar](instaladores/v1.3.0/LEIA-ME.md) · [Manual](docs/MANUAL.md) · [Relatório de testes](docs/RELATORIO-DE-TESTES.md) · [Avisos de terceiros](instaladores/v1.3.0/AVISOS-DE-TERCEIROS.md)
+> [Notas da 1.3.1 e como atualizar](instaladores/v1.3.1/LEIA-ME.md) · [Manual](docs/MANUAL.md) · [Relatório de testes](docs/RELATORIO-DE-TESTES.md) · [Avisos de terceiros](instaladores/v1.3.1/AVISOS-DE-TERCEIROS.md)
 >
-> Versões anteriores: [1.2.0](instaladores/v1.2.0) · [1.1.0](instaladores/v1.1.0)
+> Versões anteriores: [1.3.0](instaladores/v1.3.0) · [1.2.0](instaladores/v1.2.0) · [1.1.0](instaladores/v1.1.0)
 
 Organiza as fotografias de exames, monta folhas A4 com a identidade visual da clínica (logo,
 paciente, data e rodapé) e **imprime ou gera PDF**. Complementar ao **Capture Pro**: acompanha a
 pasta de capturas, sem alterar aquele programa. Funciona **100% offline**: sem login, sem internet.
 
 ![Tela principal](docs/tela-principal.png)
+
+## Novidades da 1.3.1
+- **Correção das piscadas contínuas da galeria** que apareciam na 1.3.0 (ver [notas](instaladores/v1.3.1/LEIA-ME.md)).
 
 ## Novidades da 1.3
 - **Cada página tem o seu modelo** (ex.: 6, depois 9, depois 12); o seletor vale só para a página atual.
@@ -55,7 +58,7 @@ Modelos diferentes podem ser usados no mesmo exame. As fotos nunca são deformad
 automaticamente; no PDF entram sem perda (JPEG original byte a byte).
 
 ## Testes
-124 testes automatizados (Linux), instalação/atualização 1.0 → 1.1 → 1.2 → 1.3 e autoteste do programa
+126 testes automatizados (Linux), incluindo estabilidade visual (sem piscadas), instalação/atualização 1.0 → 1.1 → 1.2 → 1.3 → 1.3.1 e autoteste do programa
 instalado em Windows simulado (Wine). **Ainda não validado em Windows real nem em impressora
 física** — ver o [relatório de testes](docs/RELATORIO-DE-TESTES.md).
 
