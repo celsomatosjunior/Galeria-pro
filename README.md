@@ -1,19 +1,27 @@
-# Galeria Pro Clínica 1.1
+# Galeria Pro Clínica 1.2
 
-> ## ⬇️ Download — versão 1.1.0 (atual)
+> ## ⬇️ Download — versão 1.2.0 (atual)
 >
-> **[GaleriaProClinica-Setup-1.1.0.exe](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.1.0/GaleriaProClinica-Setup-1.1.0.exe)** — instalador único, Windows 10/11 64 bits (22 MB).
-> SHA-256: `7424bba8b271150d501d9c83e87b8db295404dcb68d7aeb9f362f1a0568216ce`
+> **[GaleriaProClinica-Setup-1.2.0.exe](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.2.0/GaleriaProClinica-Setup-1.2.0.exe)** — instalador único, Windows 10/11 64 bits (22 MB).
+> SHA-256: `7ecd13701584f5d3993ab9322a093e81aba03a604c342a51ba5a31ed94b53a63`
 >
-> Versão portátil (sem instalar): [GaleriaProClinica-Portatil-1.1.0.zip](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.1.0/GaleriaProClinica-Portatil-1.1.0.zip) — SHA-256: `6c078499ace1a302d5b4f04e76c19daee2c6d9a5f111114f6fc70251e5d09254`
+> Versão portátil: [GaleriaProClinica-Portatil-1.2.0.zip](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.2.0/GaleriaProClinica-Portatil-1.2.0.zip) — SHA-256: `4be3b4292c922945344b2bb09f7446356d0b009142068a1075bf3694ebad0520`
 >
-> [Notas da versão e como atualizar](instaladores/v1.1.0/LEIA-ME.md) · [Manual](docs/MANUAL.md) · [Relatório de testes](docs/RELATORIO-DE-TESTES.md) · [Avisos de terceiros](instaladores/v1.1.0/AVISOS-DE-TERCEIROS.md)
+> [Notas da 1.2.0 e como atualizar](instaladores/v1.2.0/LEIA-ME.md) · [Manual](docs/MANUAL.md) · [Relatório de testes](docs/RELATORIO-DE-TESTES.md) · [Avisos de terceiros](instaladores/v1.2.0/AVISOS-DE-TERCEIROS.md)
+>
+> Versão anterior: [1.1.0](instaladores/v1.1.0)
 
 Organiza as fotografias de exames, monta folhas A4 com a identidade visual da clínica (logo,
 paciente, data e rodapé) e **imprime ou gera PDF**. Complementar ao **Capture Pro**: acompanha a
 pasta de capturas, sem alterar aquele programa. Funciona **100% offline**: sem login, sem internet.
 
 ![Tela principal](docs/tela-principal.png)
+
+## Novidades da 1.2
+- **Um clique** na miniatura seleciona, outro desmarca; **duplo clique** amplia sem mudar a seleção.
+- Seleção bem visível (borda e fundo azuis, ✔, número) e **contador** de fotos selecionadas.
+- Ao retirar uma foto, as seguintes **sobem automaticamente** (opção; pode deixar o espaço vazio).
+- **Números das posições** na prévia (só na tela).
 
 ## Novidades da 1.1
 - **Galeria e impressão independentes**: ordenar a galeria não muda a impressão, e vice-versa.
@@ -42,7 +50,7 @@ Modelos diferentes podem ser usados no mesmo exame. As fotos nunca são deformad
 automaticamente; no PDF entram sem perda (JPEG original byte a byte).
 
 ## Testes
-106 testes automatizados (Linux), instalação/atualização 1.0 → 1.1 e autoteste do programa
+113 testes automatizados (Linux), instalação/atualização 1.0 → 1.1 → 1.2 e autoteste do programa
 instalado em Windows simulado (Wine). **Ainda não validado em Windows real nem em impressora
 física** — ver o [relatório de testes](docs/RELATORIO-DE-TESTES.md).
 

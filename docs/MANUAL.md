@@ -1,4 +1,4 @@
-# Galeria Pro Clínica 1.1 — Manual rápido
+# Galeria Pro Clínica 1.2 — Manual rápido
 
 Organiza as fotos de um exame, monta folhas A4 com a identidade da clínica e imprime ou
 gera PDF. Funciona **sem internet**, sem login. As fotos originais **nunca são alteradas**.
@@ -29,8 +29,9 @@ gera PDF. Funciona **sem internet**, sem login. As fotos originais **nunca são 
      (mantém tudo e só acrescenta o que falta, preenchendo primeiro as células vazias),
      **Refazer seleção com N fotos** ou **Cancelar**.
 5. Ajuste à mão:
-   - **Marcar** uma foto na galeria (caixa ou tecla Espaço) a coloca na **primeira célula vazia**;
-     sem células vazias, cria a página seguinte. Nada do que já está posicionado se mexe.
+   - **Um clique** na miniatura seleciona a foto (borda azul, ✔ e número); **outro clique** desmarca.
+     A foto entra na **primeira célula vazia**; sem células vazias, cria a página seguinte.
+     **Duplo clique** amplia a foto sem mudar a seleção. O contador azul mostra quantas estão selecionadas.
    - Clique numa **célula vazia** da prévia e depois marque uma foto: ela entra **naquela** célula.
      Ou clique com o botão direito na célula → **Escolher foto para esta posição…**
    - **Arrastar** na prévia: sobre célula vazia = *mover*; sobre outra foto = *trocar*.
@@ -43,8 +44,9 @@ gera PDF. Funciona **sem internet**, sem login. As fotos originais **nunca são 
 7. **Salvar exame** (Ctrl+S). O trabalho também é guardado automaticamente (rascunho).
 
 ## Retirar, remover e reorganizar
-- **Retirar da página** (Delete, ou desmarcar a foto): sai da impressão, **a célula fica vazia**,
-  as outras fotos não se mexem, e a foto continua na galeria.
+- **Retirar da página** (clique de novo na miniatura, ou Delete): sai da impressão e continua na
+  galeria. Com **“Reorganizar ao retirar foto”** ligado (padrão), as fotos seguintes sobem para
+  ocupar o espaço; desligado, **a célula fica vazia** para você preencher depois.
 - **Remover da galeria deste exame** (botão direito na miniatura): tira do exame. Se a foto
   estiver na impressão, o programa avisa onde ela está. O arquivo original no computador **não** é apagado.
 - **Reorganizar e preencher espaços** (painel de páginas): é a **única** ação que fecha as
@@ -76,7 +78,8 @@ gera PDF. Funciona **sem internet**, sem login. As fotos originais **nunca são 
 | Ctrl+N / Ctrl+O / Ctrl+S | Novo / Abrir / Salvar exame |
 | Ctrl+P | Imprimir |
 | Ctrl+Z / Ctrl+Y | Desfazer / Refazer |
-| Espaço (na galeria) | Incluir/retirar as miniaturas selecionadas |
+| Clique na miniatura | Selecionar / desmarcar |
+| Espaço (na galeria) | Incluir/retirar as miniaturas realçadas (Ctrl/Shift + clique realça várias) |
 | Delete | Retirar da página (deixa a célula vazia; não apaga nada) |
 | Esc (na prévia) | Cancelar a seleção da célula |
 | Duplo clique | Ampliar a foto (roda do mouse = zoom; Esc fecha) |
