@@ -1,9 +1,49 @@
-# Relatório de testes — Galeria Pro Clínica 1.4.0 (20/10/2026)
+# Relatório de testes — Galeria Pro Clínica 1.4.1 (21/10/2026)
+
+Ambientes, separados: **Linux** (testes automatizados), **Wine 9.0** (Windows simulado: instalador
+e programa compilados). **Windows real e impressora física: não testados.**
+
+## 1. Data fixa no cabeçalho (testes obrigatórios)
+PDFs gerados com: nome curto, nome médio, nome extremamente longo, nome com vários espaços — cada
+um num exame de **3 páginas** com os modelos **6, 9 e 12** (12 páginas por ambiente). A posição foi
+lida **do próprio PDF** (coordenadas do texto).
+
+| Verificação | Linux | Wine (programa instalado) |
+|---|---|---|
+| Coordenada horizontal da data em todas as 12 páginas | idêntica (517,28 pt) | idêntica (503,61 pt) — passo H1 |
+| Borda direita da data = margem direita da área útil = borda direita das fotos | sim (±0,3 mm no PDF; exata na geometria) | sim |
+| Nome termina antes de “Data:” (sem sobreposição) | sim, nos 4 casos | sim |
+| Mesma linha de base para nome e data, cabeçalho com uma linha | sim | sim |
+| Nome extremamente longo: fonte reduzida até 80% + “…” só no nome | sim | sim |
+| Margem direita configurada diferente (20 mm): a data acompanha | sim | — |
+
+(A coordenada difere entre Linux e Wine porque as fontes instaladas em cada ambiente têm larguras
+diferentes; dentro de cada ambiente ela não muda.) Prévia, PDF e impressão usam a mesma função.
+
+## 2. “Sobre”
+Janela aberta e conferida (texto novo; “Versão 1.4.1 — 2026” lida do programa).
+
+## 3. Linux — total: 139 testes (138 aprovados como administrador + 1 de permissão aprovado como usuário comum)
+Novos: data fixa com 6 nomes × 5 modelos, nome longo reduzido/truncado, margem configurável,
+PDF real com os 4 nomes × 3 páginas. O teste antigo que esperava o nome longo quebrado em várias
+linhas (com a data embaixo) foi substituído pela regra nova.
+
+## 4. Wine 9.0 — instalador e programa 1.4.1
+- Atualização 1.4.0 → 1.4.1 por cima: 25 arquivos de exames/configuração intactos (SHA-256),
+  cópia `config.backup-antes-v1.4.1.json`, versão 1.4.1 no registro, arquivos idênticos à distribuição.
+- Autoteste do programa instalado: **36 passos aprovados**, nenhuma falha (inclui a reutilização
+  U0–U10, a regressão 6/9/12, a estabilidade E1–E3 e o cabeçalho H1).
+
+## 5. NÃO testado
+- Impressora física; Windows 10/11 real com mouse físico; arrastar físico; Capture Pro ao vivo.
+
+---
+## Versão anterior — 1.4.0
 
 Ambientes, separados: **Linux** (testes automatizados, janela real), **Wine 9.0** (Windows
 simulado: instalador e programa compilados). **Windows real e impressora física: não testados.**
 
-## 1. Fotografias reutilizáveis — testes obrigatórios (seção 6 do pedido)
+### 1.4.0 — Fotografias reutilizáveis — testes obrigatórios (seção 6 do pedido)
 Cliques reais na miniatura (eventos de mouse), Delete real na prévia.
 
 | Teste | Linux (janela real) | Wine (programa instalado) |

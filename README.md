@@ -1,21 +1,25 @@
 # Galeria Pro Clínica 1.4
 
-> ## ⬇️ Download — versão 1.4.0 (atual)
+> ## ⬇️ Download — versão 1.4.1 (atual)
 >
-> **[GaleriaProClinica-Setup-1.4.0.exe](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.4.0/GaleriaProClinica-Setup-1.4.0.exe)** — instalador único, Windows 10/11 64 bits (22 MB).
-> SHA-256: `59db277fb3f992f8add937d956c1a4f420f61aa11f174c246abaceb7765026c8`
+> **[GaleriaProClinica-Setup-1.4.1.exe](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.4.1/GaleriaProClinica-Setup-1.4.1.exe)** — instalador único, Windows 10/11 64 bits (22 MB).
+> SHA-256: `e1329a1e5015908523420e3f0a4433cf28a4033deb9705dd9100ed182540e6bf`
 >
-> Versão portátil: [GaleriaProClinica-Portatil-1.4.0.zip](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.4.0/GaleriaProClinica-Portatil-1.4.0.zip) — SHA-256: `22645c71a4cd5adbbc65c2dcb087a3b17c820b7fef454d2d81a09d485528cda2`
+> Versão portátil: [GaleriaProClinica-Portatil-1.4.1.zip](https://github.com/celsomatosjunior/Galeria-pro/raw/main/instaladores/v1.4.1/GaleriaProClinica-Portatil-1.4.1.zip) — SHA-256: `fef00fea6f24abf5accdb2522f0f70d93357efbda0a331959d502d9929127315`
 >
-> [Notas da 1.4.0 e como atualizar](instaladores/v1.4.0/LEIA-ME.md) · [Manual](docs/MANUAL.md) · [Relatório de testes](docs/RELATORIO-DE-TESTES.md) · [Avisos de terceiros](instaladores/v1.4.0/AVISOS-DE-TERCEIROS.md)
+> [Notas da 1.4.1 e como atualizar](instaladores/v1.4.1/LEIA-ME.md) · [Manual](docs/MANUAL.md) · [Relatório de testes](docs/RELATORIO-DE-TESTES.md) · [Avisos de terceiros](instaladores/v1.4.1/AVISOS-DE-TERCEIROS.md)
 >
-> Versões anteriores: [1.3.1](instaladores/v1.3.1) · [1.3.0](instaladores/v1.3.0) · [1.2.0](instaladores/v1.2.0) · [1.1.0](instaladores/v1.1.0)
+> Versões anteriores: [1.4.0](instaladores/v1.4.0) · [1.3.1](instaladores/v1.3.1) · [1.3.0](instaladores/v1.3.0) · [1.2.0](instaladores/v1.2.0) · [1.1.0](instaladores/v1.1.0)
 
 Organiza as fotografias de exames, monta folhas A4 com a identidade visual da clínica (logo,
 paciente, data e rodapé) e **imprime ou gera PDF**. Complementar ao **Capture Pro**: acompanha a
 pasta de capturas, sem alterar aquele programa. Funciona **100% offline**: sem login, sem internet.
 
 ![Tela principal](docs/tela-principal.png)
+
+## Novidades da 1.4.1
+- **Data do exame em posição fixa** no cabeçalho, alinhada à borda direita das fotos, para qualquer nome de paciente.
+- Novo texto em **Sobre**.
 
 ## Novidades da 1.4
 - **Fotos reutilizáveis**: cada clique coloca a foto mais uma vez (dez cliques = dez usos), na mesma página ou em outras. A galeria não marca nem bloqueia as fotos usadas.
@@ -65,7 +69,7 @@ Modelos diferentes podem ser usados no mesmo exame. As fotos nunca são deformad
 automaticamente; no PDF entram sem perda (JPEG original byte a byte).
 
 ## Testes
-132 testes automatizados (Linux), incluindo estabilidade visual (sem piscadas), instalação/atualização 1.0 → 1.1 → 1.2 → 1.3 → 1.3.1 → 1.4.0 e autoteste do programa
+139 testes automatizados (Linux), incluindo estabilidade visual (sem piscadas), instalação/atualização 1.0 → 1.1 → 1.2 → 1.3 → 1.3.1 → 1.4.0 → 1.4.1 e autoteste do programa
 instalado em Windows simulado (Wine). **Ainda não validado em Windows real nem em impressora
 física** — ver o [relatório de testes](docs/RELATORIO-DE-TESTES.md).
 

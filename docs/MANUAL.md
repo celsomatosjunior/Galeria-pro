@@ -85,6 +85,9 @@ gera PDF. Funciona **sem internet**, sem login. As fotos originais **nunca são 
 
 ## Bom saber
 - **Ordem de leitura**: esquerda → direita, de cima para baixo.
+- **Cabeçalho**: “Paciente: nome” à esquerda e “Data:” sempre no mesmo lugar, à direita, alinhada
+  com a borda direita das fotos. Nome muito longo é reduzido um pouco e, se preciso, encurtado com
+  “…” — nunca empurra nem cobre a data.
 - A miniatura mostra **usada N×** quando a foto está na impressão (passe o mouse para ver em
   quais posições). Na prévia, cada ocorrência tem o seu número de ordem.
 - A barra inferior mostra, por exemplo: *10 foto(s) na composição · 2 página(s) · 2 espaço(s) disponível(is)*.
